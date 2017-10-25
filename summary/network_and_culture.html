@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>network_and_culture</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\malim\.atom\packages\markdown-preview-enhanced\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+       
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <p>前嶋直樹(東京大学大学院人文社会系研究科博士課程1年)<br>
+文献：<strong>Hanquinet, L., &amp; Savage, M. (Eds.). (2015). Routledge international handbook of the sociology of art and culture. Routledge.</strong></p>
+<h1 class="mume-header" id="chapter-11-rule-a-bearman-p-networks-and-culture">Chapter 11: Rule, A., &amp; Bearman, P.. Networks and culture.</h1>
+
+<h2 class="mume-header" id="&#x5185;&#x5BB9;&#x8981;&#x7D04;">内容要約</h2>
+
+<h4 class="mume-header" id="&#x306F;&#x3058;&#x3081;&#x306B;">はじめに</h4>
+
+<ul>
+<li>「人々のつながりは意味を帯びており、意味は人・物・考えのネットワークにすぎない」という考え方を用いて、以下の3点の古典的な問題に答える。
+<ol>
+<li>いかにして趣味が人々を分化していくか。</li>
+<li>いかにして意味の構造と社会関係の構造が共進化するか。</li>
+<li>いかにして意味の構造の変容が支配構造の変容を形作るか。</li>
+</ol>
+</li>
+<li>アートワールドは、意味付与や事物の質に関する知覚によって関係するコミュニティから構成される。</li>
+</ul>
+<h4 class="mume-header" id="&#x30A2;&#x30FC;&#x30C8;&#x30EF;&#x30FC;&#x30EB;&#x30C9;">アート・ワールド</h4>
+
+<ul>
+<li>Dantoによるアートワールドのフォーマルな記述
+<ul>
+<li>アートワールドに存在する作品（事物）の集合と、それに付与される美点の可能性の集合を考える。</li>
+<li>それぞれのアート作品にそれぞれの美点があるかどうかをなし＝0、あり＝1の2値で評定していく。</li>
+<li>例えば、以下のような美点×作品の行列を <strong>M</strong> とすると</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>美点1</th>
+<th>美点2</th>
+<th>美点3</th>
+<th>美点4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作品A</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>作品B</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>作品C</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mrow><mi mathvariant="bold">M</mi></mrow><mrow><msup><mi mathvariant="bold">M</mi><mi mathvariant="bold">t</mi></msup></mrow></mrow></mrow><annotation encoding="application/x-tex">\bf{M} \bf{M}^t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.807444em;"></span><span class="strut bottom" style="height:0.807444em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord"><span class="mord mathbf">M</span></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathbf">M</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.807444em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathbf mtight">t</span></span></span></span></span></span></span></span></span></span></span></span></span>が作品×作品の行列となる。ここで各要素は各作品を共通して持っている美点の数を表す。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>作品A</th>
+<th>作品B</th>
+<th>作品C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作品A</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>作品B</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>作品C</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msup><mi mathvariant="bold">M</mi><mi mathvariant="bold">t</mi></msup><mrow><mrow><mi mathvariant="bold">M</mi></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\bf{M}^t \bf{M}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.807444em;"></span><span class="strut bottom" style="height:0.807444em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord"><span class="mord"><span class="mord mathbf">M</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.807444em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathbf mtight">t</span></span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord mathbf">M</span></span></span></span></span></span></span>が美点×美点の行列となる。ここで各要素は各美点を共通して持っている作品の数を表す。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>美点1</th>
+<th>美点2</th>
+<th>美点3</th>
+<th>美点4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美点1</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>美点2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>美点3</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>美点4</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>アートワールドが豊かになっていく過程でいかにして行と列が追加・消去されていくかは、社会学的な関心である。</li>
+</ul>
+<h4 class="mume-header" id="&#x30A2;&#x30FC;&#x30C8;&#x30EF;&#x30FC;&#x30EB;&#x30C9;&#x3067;&#x306E;&#x4F4D;&#x7F6E;">「アート・ワールド」での位置</h4>
+
+<ul>
+<li>Dantoはアートワールドが社会的過程からは遊離しているものと捉えた。
+<ul>
+<li>経験的なアートの社会学の多勢も、Danto的なアートの世界が「他の社会」とは独立して成立していると考えていた。</li>
+<li>Bourdieuは、アート生産の場は、その中での位置取りをめぐる闘争であるとした。
+<ul>
+<li>Danto的に言えば、アートの世界は、他のものが占める位置の価値を下げる形で、行列の中に体系的に位置を占めていく競争の場である。</li>
+<li>作品が占める美学的な位置は、作品だけでなく、作家個人にも付与されるものである</li>
+</ul>
+</li>
+<li>Beckerのアートワールドは人々のネットワークである。
+<ul>
+<li>美学的特性は社会構造に付随する。</li>
+<li>Beckerは美学的に関連のある特性の宇宙(e.g. ジャンルやカノンなど)を定義するものとしての社会的交換のパターンを重視。
+<ul>
+<li>どのような事物を正統と見なすかによって、人々は下位集団へと分けられる。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>アートワールドの全ての可能性が等しく実際に実現されない限り、アートワールドは意味のある構造である。</li>
+<li>結局のところアートワールドは、人によってつながっている事物のネットワーク(=Bourdieu)としても、事物によってつながっている人のネットワーク(=Becker)としても見ることができる。</li>
+</ul>
+<h4 class="mume-header" id="&#x8DA3;&#x5473;&#x3068;&#x5206;&#x5316;">趣味と分化</h4>
+
+<ul>
+<li>Bourdieuの <em>Distinction</em> での主張：趣味は社会構造上の位置によって形作られる。
+<ul>
+<li>↔個人の好き嫌いがどういうわけか自然に決まるという個人的趣味という直感的なアイデア)</li>
+<li>Bourdieuにとって、趣味をめぐる闘争とは客観的な社会構造上の地位の意味をめぐる闘争である</li>
+</ul>
+</li>
+<li>「共有された理解」をもつコミュニティを特定する方法
+<ul>
+<li>GoldbergのRCA(Relational Class Analysis)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>RCAは、データセット内の観測の各ペアについて、関係性の尺度を計算する。その結果、完全グラフ、無向グラフ、および加重グラフが作成される。</li>
+<li>重みが統計的に有意でないグラフエッジは削除され、残っているエッジは絶対値で変換される。</li>
+<li>RCAは、グラフ分割アルゴリズムを使用して、グラフを同様の観測結果のサブグループに分割する。<br>
+（Goldberg 2011：1405）</li>
+</ol>
+</blockquote>
+<h4 class="mume-header" id="&#x610F;&#x5473;&#x306E;&#x69CB;&#x9020;&#x3068;&#x95A2;&#x4FC2;&#x306E;&#x5171;&#x9032;&#x5316;">意味の構造と関係の共進化</h4>
+
+<ul>
+<li>Fraser(1985)の女性の衣服の変化に関する分析
+<ul>
+<li>20世紀半ばの米国では、衣服の着用は、社会的アイデンティティ（すなわち、主に年齢、婚姻状況）のシグナルであった。</li>
+<li>女性の社会的地位による衣服の着用への制限がなくなったことで、服装による「自己表現」が可能になった。</li>
+<li>衣服は、「どのように見られるか」から「どのような意味か」によって選択されるようになった。</li>
+</ul>
+</li>
+<li>Quentin Van Doosselaere(2009)による中世ジェノヴァを起点とする商業資本主義の台頭の説明
+<ul>
+<li>commendaと呼ばれる初期のエクイティ協定の浸透 -&gt; 貿易の拡大に成功。</li>
+<li>分析の基本的方針：ネットワーク構造と、社会的アイデンティティの変化を時系列的に観察。
+<ul>
+<li>commendaに参加する個人のネットワークを分析
+<ul>
+<li>ネットワークには貴族による密なコアが形成されていたが、ランダムネットワークとの比較を行うと、クラスタリングの程度が低かった(<a href="http://eclectic.ss.uci.edu/~drwhite/Conf/Doos_conf_complexity.pdf%E3%81%AB%E3%83%97%E3%83%AC%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88%E3%81%82%E3%82%8A">http://eclectic.ss.uci.edu/~drwhite/Conf/Doos_conf_complexity.pdfにプレプリントあり</a>)。
+<ul>
+<li>これは非市場的な過程によって紐帯が形成されたことを示している。</li>
+</ul>
+</li>
+<li>中世では貴族の中での利益を高めるために形成された紐帯が、後に商人たちの成功にとって欠かせない要素となった。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>都市のパトロンは、伝統的な資源を少数の一族に合わせた商業活動に変え、中世の封建権からルネッサンスの商業支配階級への突然変異を完成させていた。逆に、中央集権的および階層的集団の分裂によって特徴付けられる封建的過渡的社会秩序は、人口の残りの部分からますます分離された単一の均質かつ密接なエリートネットワークの中で、激しい社会活動に再構成された (Van Doosselaere 2009:4)</p>
+</blockquote>
+<h4 class="mume-header" id="&#x610F;&#x5473;&#x306E;&#x69CB;&#x9020;&#x306E;&#x5909;&#x5BB9;&#x3068;&#x652F;&#x914D;&#x306E;&#x69CB;&#x9020;&#x306E;&#x5909;&#x5BB9;">意味の構造の変容と支配の構造の変容</h4>
+
+<ul>
+<li>Danto的な観点からすれば、列の破壊とはすなわち支配である。
+<ul>
+<li>Beckerによれば、特定の意味構造の美的可能性の哲学的正当化は、集団行動の特定のパターンを調整し、それらを正統化し、社会構造を再構成するための補助的な役割を果たす。</li>
+<li>意味の構造変容は社会的支配の変容と関連している。</li>
+</ul>
+</li>
+<li>Bearman(1993) &quot;Relations into Rhetorics&quot;
+<ul>
+<li>英国のジェントリー間の社会的・政治的行動の基盤としての親族の崩壊が、エリートなアイデンティティのための新たな時代をもたらし、政治的動員をどのようにもたらしたか。</li>
+<li>政治行動の指針としての親族の崩壊によって、宗教的同盟のイデオロギーによる郡を超えた動員が可能になった。</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="&#x30B3;&#x30E1;&#x30F3;&#x30C8;">コメント</h2>
+
+<ul>
+<li>
+<p>著者について</p>
+<ul>
+<li>Alix Ruleはアメリカの一般教書演説にLDAを用いた歴史研究で有名。ColumbiaのPeter Bearman門下。</li>
+<li>Peter Bearmanは本文中のRelations into Rhetoricsや恋愛・性交渉ネットワークの研究(Bearman et al. 2004)、ネットワーク分析的なライフストーリーの研究(Bearman and Stovel 2000)で有名。</li>
+</ul>
+</li>
+<li>
+<p>本文を読んでの疑問</p>
+<ul>
+<li>やたらと&quot;in practice&quot;や&quot;practical&quot;といった語を用いるのが気になった。</li>
+<li>tastesによる人々のdifferentiationを明らかにしてそもそも何が嬉しいのか？
+<ul>
+<li>趣味はなぜ社会学にとって重要か？</li>
+<li>社会経済的地位やその他の人口学的な変数を統制した上でも残る「趣味」の社会学的に重要な効果とは？</li>
+</ul>
+</li>
+<li>オブジェクトの知覚の傾向性(=審美眼？)が社会構造によって規定されているというのは理論的には確かに想定可能だが、あくまで諸要因のうちの一つとして考えるのが穏当。</li>
+</ul>
+</li>
+<li>
+<p>関係社会学(relational sociology, Emirbayer 1997)について</p>
+</li>
+<li>
+<p>趣味と差別的交際(differential association)に関する研究</p>
+<ul>
+<li>趣味(hobby)に基づくコミュニティは、成員の年齢に関する異質性が高い(McPherson 1983)</li>
+<li>趣味を通じて知り合ったカップルは、職業階層に関する異質性が高い(前嶋・打越 2017)。</li>
+</ul>
+</li>
+<li>
+<p>界を可視化・統計的分析するフォーマルな手法はかなり整備されている。</p>
+<ul>
+<li>Bourdieu自身は対応分析を好んだが、MDSやネットワーク分析的手法も同様に有効。
+<ul>
+<li>パリ・コミューンの動員に近隣関係が果たした役割を明らかにしたGould(1991)や、メディチ家の支配体制に構造的空隙が果たした役割を明らかにしたPadgett and Ansell(1993)のように、ネットワーク分析は歴史研究にも使える。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="&#x53C2;&#x8003;&#x6587;&#x732E;">参考文献</h2>
+
+<ul>
+<li>Bearman, P. S. (1993). Relations into rhetorics: local elite social structure in Norfolk, England, 1540-1640. Rutgers University Press.</li>
+<li>Bearman, P. S., &amp; Stovel, K. (2000). Becoming a Nazi: A model for narrative networks. Poetics, 27(2-3), 69-90.</li>
+<li>Bearman, P. S., Moody, J., &amp; Stovel, K. (2004). Chains of affection: The structure of adolescent romantic and sexual networks. American journal of sociology, 110(1), 44-91.</li>
+<li>Emirbayer, M. (1997). Manifesto for a relational sociology. American journal of sociology, 103(2), 281-317.</li>
+<li>Goldberg, A. (2011). Mapping shared understandings using relational class analysis: The case of the cultural omnivore reexamined. American Journal of Sociology, 116(5), 1397-1436.</li>
+<li>Gould, R. V. (1991). Multiple networks and mobilization in the Paris Commune, 1871. American Sociological Review, 716-729.</li>
+<li>前嶋直樹・打越文弥.(2017). 地位の類似性か、場の近接性か？　---SSMデータを用いた夫婦の職業階層結合のネットワーク分析---. 第64回数理社会学会萌芽的セッション(ポスター報告).</li>
+<li>McPherson, M. (1983). An ecology of affiliation. American Sociological Review, 519-532.</li>
+<li>Padgett, J. F., &amp; Ansell, C. K. (1993). Robust Action and the Rise of the Medici, 1400-1434. American journal of sociology, 98(6), 1259-1319.</li>
+<li>Rule, A., Cointet, J. P., &amp; Bearman, P. S. (2015). Lexical shifts, substantive changes, and continuity in State of the Union discourse, 1790–2014. Proceedings of the National Academy of Sciences, 112(35), 10837-10844.</li>
+<li>Van Doosselaere, Q. (2009). Commercial agreements and social dynamics in medieval Genoa. Cambridge University Press.</li>
+</ul>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#chapter-11-rule-a-bearman-p-networks-and-culture">Chapter 11: Rule, A., &amp; Bearman, P.. Networks and culture.</a>
+<ul>
+<li><a href="#%E5%86%85%E5%AE%B9%E8%A6%81%E7%B4%84">内容要約</a><br>
+* <a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</a><br>
+* <a href="#%E3%82%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89">アート・ワールド</a><br>
+* <a href="#%E3%82%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A7%E3%81%AE%E4%BD%8D%E7%BD%AE">「アート・ワールド」での位置</a><br>
+* <a href="#%E8%B6%A3%E5%91%B3%E3%81%A8%E5%88%86%E5%8C%96">趣味と分化</a><br>
+* <a href="#%E6%84%8F%E5%91%B3%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E9%96%A2%E4%BF%82%E3%81%AE%E5%85%B1%E9%80%B2%E5%8C%96">意味の構造と関係の共進化</a><br>
+* <a href="#%E6%84%8F%E5%91%B3%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%AE%E5%A4%89%E5%AE%B9%E3%81%A8%E6%94%AF%E9%85%8D%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%AE%E5%A4%89%E5%AE%B9">意味の構造の変容と支配の構造の変容</a></li>
+<li><a href="#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88">コメント</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">参考文献</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
